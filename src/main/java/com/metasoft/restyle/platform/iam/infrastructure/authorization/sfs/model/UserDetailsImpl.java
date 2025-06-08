@@ -54,32 +54,5 @@ public class UserDetailsImpl implements UserDetails {
                 authorities);
     }
 
-    // Los siguientes métodos deben implementarse manualmente para cumplir con la interfaz UserDetails de Spring Security.
-    // Lombok no puede generar los métodos con el prefijo exacto 'is' requerido por la interfaz, por lo que es necesario mantenerlos manualmente.
-    // Suprimimos la advertencia de código redundante ya que esto es intencional y necesario para la compatibilidad.
 
-    @SuppressWarnings("all")
-    public boolean isAccountNonExpired() {
-        return accountNonExpired;
-    }
-
-    @SuppressWarnings("all")
-    public boolean isAccountNonLocked() {
-        return accountNonLocked;
-    }
-
-    @SuppressWarnings("all")
-    public boolean isCredentialsNonExpired() {
-        return credentialsNonExpired;
-    }
-
-    @SuppressWarnings("all")
-    public boolean isEnabled() {
-        return enabled;
-    }
-
-    @SuppressWarnings("all")
-    public Collection<? extends GrantedAuthority> getAuthorities() {
-        return authorities;
-    }
 }
