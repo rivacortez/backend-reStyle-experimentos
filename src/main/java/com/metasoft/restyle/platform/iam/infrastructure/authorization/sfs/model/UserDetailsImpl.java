@@ -17,8 +17,6 @@ import java.util.stream.Collectors;
  */
 @Getter
 @EqualsAndHashCode
-//noinspection RedundantGetter
-@SuppressWarnings("RedundantGetter")
 public class UserDetailsImpl implements UserDetails {
 
     private final String username;
@@ -56,28 +54,32 @@ public class UserDetailsImpl implements UserDetails {
                 authorities);
     }
 
-    @Override
+    // Los siguientes métodos deben implementarse manualmente para cumplir con la interfaz UserDetails de Spring Security.
+    // Lombok no puede generar los métodos con el prefijo exacto 'is' requerido por la interfaz, por lo que es necesario mantenerlos manualmente.
+    // Suprimimos la advertencia de código redundante ya que esto es intencional y necesario para la compatibilidad.
+
+    @SuppressWarnings("all")
     public boolean isAccountNonExpired() {
-        return getAccountNonExpired();
+        return accountNonExpired;
     }
 
-    @Override
+    @SuppressWarnings("all")
     public boolean isAccountNonLocked() {
-        return getAccountNonLocked();
+        return accountNonLocked;
     }
 
-    @Override
+    @SuppressWarnings("all")
     public boolean isCredentialsNonExpired() {
-        return getCredentialsNonExpired();
+        return credentialsNonExpired;
     }
 
-    @Override
+    @SuppressWarnings("all")
     public boolean isEnabled() {
-        return getEnabled();
+        return enabled;
     }
 
-    @Override
+    @SuppressWarnings("all")
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        return getAuthorities();
+        return authorities;
     }
 }
