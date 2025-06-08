@@ -1,0 +1,28 @@
+# Ignorar directorios de IDE
+/.idea/
+/.settings/
+*.iml
+
+# Archivos de configuración de Eclipse
+.classpath
+.factorypath
+.project
+
+# Archivos temporales de IDE
+/workspace.xml
+
+# Maven build output
+/target/
+
+# Maven Wrapper NO se ignora, es útil compartir
+# Pero si tienes logs o tmp dentro de .mvn, ignóralos si existen
+
+# Archivos de sistema operativo
+.DS_Store
+Thumbs.db
+
+# Carpetas o archivos locales temporales
+/shelf/
+/httpRequests/
+/dataSources/
+/dataSources.local.xml
