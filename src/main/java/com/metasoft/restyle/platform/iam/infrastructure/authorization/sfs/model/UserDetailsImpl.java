@@ -17,6 +17,8 @@ import java.util.stream.Collectors;
  */
 @Getter
 @EqualsAndHashCode
+//noinspection RedundantGetter
+@SuppressWarnings("RedundantGetter")
 public class UserDetailsImpl implements UserDetails {
 
     private final String username;
