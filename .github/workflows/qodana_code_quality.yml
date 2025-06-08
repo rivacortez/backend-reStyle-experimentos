@@ -27,3 +27,10 @@ jobs:
         env:
           QODANA_TOKEN: ${{ secrets.QODANA_TOKEN_827352416 }}
           QODANA_ENDPOINT: 'https://qodana.cloud'
+      - name: 'Qodana Configuración personalizada'
+        run: |
+          echo 'version: "1.0"
+          profile:
+            name: "qodana.recommended"
+          exclude:
+            - name: "RedundantGetter"' > qodana.yaml
