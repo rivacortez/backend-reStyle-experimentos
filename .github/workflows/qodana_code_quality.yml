@@ -33,4 +33,14 @@ jobs:
           profile:
             name: "qodana.recommended"
           exclude:
-            - name: "RedundantGetter"' > qodana.yaml
+            - name: "RedundantGetter"
+          licenseAudit:
+            allowedLicenses:
+              - Apache-2.0
+              - MIT
+              - BSD-3-Clause
+              - EPL-1.0
+              - LGPL-2.0-or-later
+              - LGPL-2.1-only
+              - GPL-2.0-only
+              - BSD-3-CLAUSE-NO-TRADEMARK' > qodana.yaml
