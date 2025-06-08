@@ -54,5 +54,28 @@ public class UserDetailsImpl implements UserDetails {
                 authorities);
     }
 
+    @Override
+    public boolean isAccountNonExpired() {
+        return getAccountNonExpired();
+    }
 
+    @Override
+    public boolean isAccountNonLocked() {
+        return getAccountNonLocked();
+    }
+
+    @Override
+    public boolean isCredentialsNonExpired() {
+        return getCredentialsNonExpired();
+    }
+
+    @Override
+    public boolean isEnabled() {
+        return getEnabled();
+    }
+
+    @Override
+    public Collection<? extends GrantedAuthority> getAuthorities() {
+        return getAuthorities();
+    }
 }
