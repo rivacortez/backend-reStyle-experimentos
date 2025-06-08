@@ -18,9 +18,9 @@ public class ProfileCommandServiceImpl implements ProfileCommandService {
     @Override
     public Long handle(CreateProfileCommand command) {
         var emailAddress = new EmailAddress(command.email());
-        profileRepository.findByEmail(emailAddress).map(profile -> {
+        if (profileRepository.findByEmail(emailAddress).isPresent()) {
             throw new IllegalArgumentException("Profile with email " + command.email() + " already exists");
-        });
+        }
         var profile = new Profile(command.email(), command.password(),command.typeUser(), command.firstName(), command.paternalSurname(), command.maternalSurname());
         profileRepository.save(profile);
         return profile.getId();
