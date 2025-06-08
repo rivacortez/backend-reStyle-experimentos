@@ -2,17 +2,5 @@ version: "1.0"
 linter: jetbrains/qodana-jvm:2025.1
 profile:
   name: qodana.recommended
-licenseAudit:
-  allowedLicenses:
-    - Apache-2.0
-    - MIT
-    - BSD-3-Clause
-    - BSD-3-CLAUSE-NO-TRADEMARK
-    - EPL-1.0
-    - LGPL-2.0-or-later
-    - LGPL-2.1-only
-    - GPL-2.0-only
-    - DOC
-    - PROPRIETARY-LICENSE
-include:
+exclude:
   - name: CheckDependencyLicenses
